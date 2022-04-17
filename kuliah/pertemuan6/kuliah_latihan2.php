@@ -5,29 +5,29 @@ $mahasiswa = [
         "npm" => "213040041",
         "email" => "najwanajwasptn22@gmail.com",
         "jurusan" => "Teknik Informatika",
-        "gambar" => "img/Good Times.png"
+        "gambar" => "img/wawa.jpeg"
     ],
+    
     [
         "nama" => "Putri Legiani", 
         "npm" => "213040039", 
         "email" => "legianiputri@gmail.com", 
-        "jurusan" => "Teknik Informatika"
+        "jurusan" => "Teknik Informatika",
+        "gambar" => "img/mput.png"
     ],
+    
     [
         "nama" => "Aufa Husniati", 
         "npm" => "213040018", 
         "email"=> "aufahusniati@gmail.com", 
-        "jurusan" => "Teknik Informatika"
+        "jurusan" => "Teknik Informatika",
+        "gambar" => "img/peh.jpeg"
     ],
-    [
-        "nama" => "Risma Rahmania", 
-        "npm" => "213040013", 
-        "email"=> "rismaima@gmail.com", 
-        "jurursan" => "Teknik Informatika"
-    ]
+    
 ];
-
 ?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -54,27 +54,36 @@ $mahasiswa = [
       <th scope="col">Email</th>
       <th scope="col">Jurusan</th>
       <th scope="col">Aksi</th>
+    
     </tr>
   </thead>
   <tbody>
+  
+  <?php $no = 1; foreach($mahasiswa as $mhs)  { ?>
     <tr class="align-middle">
-      <th scope="row">1</th>
-      <td>
-          <img src="img/Good Times.png" width="50px">
-      </td>
-      <td>Najwa Septiana A</td>
-      <td>213040041</td>
-      <td>najwanajwasptn22@gmail.com</td>
-      <td>Teknik Informatika</td>
-      <td>
-          <a href="" class="btn badge bg-warning">edit</a>
-          <a href="" class="btn badge bg-danger">delete</a>
-      </td>
+    <th scope="row"><?= $no++;?></th>
+    <td>
+    <img src="<?php echo $mhs["gambar"]?>" width="50px" class="rounded-circle">
+    </td>
+    <td><?php echo $mhs["nama"]?></td>
+    <td><?php echo $mhs["npm"] ?></td>
+    <td><?php echo $mhs["email"]?></td>
+    <td><?php echo $mhs["jurusan"]?></td>
+           
+    <td>
+      <a href="" class="btn badge bg-warning">edit</a>
+      <a href="" class="btn badge bg-danger">delete</a>
+    </td>
+    </tr> 
+  <?php } ?>
+    <tr class="align-middle">
+           
     </tr>
   </tbody>
-</table>
+  </table>
   </div>
-    <!-- Optional JavaScript; choose one of the two! -->
+    
+  <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
