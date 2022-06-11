@@ -1,28 +1,40 @@
-<?php 
-  $mahasiswa = [
-    [
-      "nama" => "Najwa Septiana", 
-      "npm" => "213040041", 
-      "email" => "najwanajwasptn22@gmail.com", 
-      "jurusan" => "Teknik Informatika",
-      "gambar" => "img/wawa.jpeg"
-    ],
-    [
-      "nama" =>"Putri Legiani", 
-      "npm" => "213040039", 
-      "email" => "putrilegiani@gmail.com", 
-      "jurusan" => "Teknik Informatika",
-      "gambar" => "img/mput.png"
-    ],
-    [
-      "nama" => "Aufa Husniati", 
-      "npm" => "213040018", 
-      "email" => "aufaaupeh@gmail.com", 
-      "jurusan" => "Teknik Informatika",
-      "gambar" => "img/peh.jpeg"
-    ]
-  ];
+<?php
+    $mahasiswa = [
+        [
+            "nama" => "Najwa Septiana A", 
+            "npm" => "213040041", 
+            "email" => "najwanajwasptn22@gmail.com", 
+            "jurusan" => "Teknik Informatika",
+            "gambar" => "img/wawa.jpeg"
+        ],
+
+        [
+            "nama" => "Putri Legiani", 
+            "npm" =>"213040039", 
+            "email" => "ilegipp@gmail.com", 
+            "jurusan" => "Teknik Informatika",
+            "gambar" => "img/mput.png"
+        ],
+
+        [
+            "nama" => "Aufa Husniati", 
+            "npm" =>"213040018", 
+            "email" =>"aufaaupeh@gmail.com", 
+            "jurusan" =>"Teknik Informatika",
+            "gambar"  => "img/peh.jpeg"
+        ],
+
+        [
+            "nama" => "Emilia Paradilas", 
+            "email" =>"emiliparadilas@gmail.com",
+            "jurusan" =>"Teknik Informatika",
+            "npm" =>"213040043", 
+            "gambar" => "img/org.jpg"
+        ]
+    ]; 
 ?>
+
+
 
 <!doctype html>
 <html lang="en">
@@ -37,35 +49,42 @@
     <title>Daftar Mahasiswa</title>
   </head>
   <body>
+    
     <div class="container">
-      <h1>Daftar Mahasiswa</h1>
-      <table class="table">
+        <h1>Daftar Mahasiswa</h1>
+        <table class="table">
         <thead>
-          <tr>
+            <tr>
             <th scope="col">#</th>
             <th scope="col">Gambar</th>
             <th scope="col">Nama</th>
             <th scope="col">Aksi</th>
-          </tr>
+
+            </tr>
         </thead>
         <tbody>
-        <?php $no = 1; foreach($mahasiswa as $mhs) { ?>
-          <tr class="allign-middle">
-            <th scope="row"><?= $no++; ?></th>
-            <td>
-              <img src="img/bgproduct.jpg" width="60px" alt="" class="rounded-circle">
-            </td>
-              <td><?= $mhs["nama"]; ?></td>
-              <td>
-              <a href="" class="btn badge bg-warning">edit</a>
-              <a href="" class="btn badge bg-danger">delete</a>
-              <a href="kuliah_latihan4.php?gambar=<?= $mhs["gambar"]; ?>&<?= $mhs["nama"]; ?>&<?= $mhs["email"]; ?>&<?= $mhs["npm"]; ?>&<?= $mhs["jurusan"]; ?>" class="btn badge bg-info">detail</a>
-            </td>
-        <?php } ?>
-        </tbody>
 
-      </table>
-    </div>
+        <?php $no = 1; foreach($mahasiswa as $mhs)  { ?>
+            <tr class="align-middle">
+            <th scope="row"><?= $no++;?></th>
+            <td>
+            <img src="<?php echo $mhs["gambar"]?>" width="50px" class="rounded-circle">
+            </td>
+            <td><?php echo $mhs["nama"]?></td>
+                   
+            <td>
+                <a href="" class="btn badge bg-warning">edit</a>
+                <a href="" class="btn badge bg-danger">delete</a>
+                <a href="kuliah_latihan4.php?gambar=<?= $mhs["gambar"]; ?>&nama=<?= $mhs["nama"]; ?>&npm=<?= $mhs["npm"]; ?>&email=<?= $mhs["email"]; ?>&jurusan=<?= $mhs["jurusan"]; ?>" class="btn badge bg-info">detail</a>
+            </td>
+            </tr> 
+        <?php } ?>
+            <tr class="align-middle">
+           
+            </tr>
+        </tbody>
+        </table>
+        </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

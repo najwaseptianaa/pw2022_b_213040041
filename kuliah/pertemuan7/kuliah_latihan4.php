@@ -1,28 +1,40 @@
-<?php 
-  $mahasiswa = [
-    [
-      "nama" => "Najwa Septiana", 
-      "npm" => "213040041", 
-      "email" => "najwanjawasptn22@gmail.com", 
-      "jurusan" => "Teknik Informatika",
-      "gambar" => "img/wawa.jpeg"
-    ],
-    [
-      "nama" =>"Putri Legiani", 
-      "npm" => "213040039", 
-      "email" => "putrilegiani@gmail.com", 
-      "jurusan" => "Teknik Informatika",
-      "gambar" => "img/mput.png"
-    ],
-    [
-      "nama" => "Aufa Husiati", 
-      "npm" => "213040018", 
-      "email" => "aufaaupeh@gmail.com", 
-      "jurusan" => "Teknik Informatika",
-      "gambar" => "img/peh.jpeg"
-    ]
-  ];
+<?php
+    $mahasiswa = [
+        [
+            "nama" => "Najwa Septiana A", 
+            "npm" => "213040041", 
+            "email" => "najwanajwasptn22@gmail.com", 
+            "jurusan" => "Teknik Informatika",
+            "gambar" => "img/wawa.jpeg"
+        ],
+
+        [
+            "nama" => "Putri Legiani", 
+            "npm" =>"213040039", 
+            "email" => "ilegip@gmail.com", 
+            "jurusan" => "Teknik Informatika",
+            "gambar" => "img/mput.png"
+        ],
+
+        [
+            "nama" => "Aufa Husniati", 
+            "npm" =>"213040018", 
+            "email" =>"aufaupeh@gmail.com", 
+            "jurusan" =>"Teknik Informatika",
+            "gambar"  => "img/peh.jpeg"
+        ],
+
+        [
+            "nama" => "Emilia Paradilas", 
+            "email" =>"emilparadilas@gmail.com",
+            "jurusan" =>"Teknik Informatika",
+            "npm" =>"213040043", 
+            "gambar" => "img/org.jpg"
+        ]
+    ]; 
 ?>
+
+
 
 <!doctype html>
 <html lang="en">
@@ -37,28 +49,27 @@
     <title>Detail Mahasiswa</title>
   </head>
   <body>
+    
     <div class="container">
-      <h1>Detail Mahasiswa</h1>
-      
-          <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="<?= $_GET["gambar"]; ?>" class="img-fluid rounded-start">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title"><?= $_GET["nama"]; ?></h5>
-            <p class="card-text"><?= $_GET["npm"]; ?></p>
-            <p class="card-text"><?= $_GET["email"]; ?></p>
-            <p class="card-text"><?= $_GET["jurusan"]; ?></p>
-            
-            <a href="kuliah_latihan3.php"></a>
-          </div>
-        </div>
+        <h1>Detail Mahasiswa</h1>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="<?= $_GET["gambar"]; ?>" class="img-fluid rounded-start">
+                    </div>
+            <div class="col-md-8">
+            <div class="card-body">
+        <h5 class="card-title"><?= $_GET["nama"]; ?></h5>
+        <p class="card-text"><?= $_GET["npm"]; ?></p>
+        <p class="card-text"><?= $_GET["email"]; ?></p>
+        <p class="card-text"><?= $_GET["jurusan"]; ?></p>
+
+        <a href="kuliah_latihan3.php">Kembali</a>
       </div>
     </div>
-
-    </div>
+  </div>
+</div>
+        </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
